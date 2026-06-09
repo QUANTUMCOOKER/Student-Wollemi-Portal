@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #60a5fa;
+  --color-accent: #2563eb;
+  --color-background: #ffffff;
+  --color-text: #1f2937;
+  --radius-theme: 0.5rem;
+  --shadow-glow: none;
+}
+
+[data-theme='liquid-glass'] {
+  --color-primary: #ffffff4d;
+  --color-secondary: #f0f9ff4d;
+  --color-accent: #0ea5e9;
+  --color-background: #f8fafc;
+  --color-text: #0f172a;
+  --radius-theme: 1rem;
+}
+
+[data-theme='neon'] {
+  --color-primary: #ff00ff;
+  --color-secondary: #00ffff;
+  --color-accent: #ffff00;
+  --color-background: #050505;
+  --color-text: #ffffff;
+  --radius-theme: 0.25rem;
+  --shadow-glow: 0 0 15px #ff00ff;
+}
+
+[data-theme='curves'] {
+  --color-primary: #f43f5e;
+  --color-secondary: #fb7185;
+  --color-accent: #e11d48;
+  --color-background: #fff1f2;
+  --color-text: #4c0519;
+  --radius-theme: 2.5rem;
+}
+
+[data-theme='wave'] {
+  --color-primary: #06b6d4;
+  --color-secondary: #22d3ee;
+  --color-accent: #0891b2;
+  --color-background: #ecfeff;
+  --color-text: #164e63;
+  --radius-theme: 1.5rem;
+}
+
+body {
+  @apply bg-theme-background text-theme-text transition-colors duration-300 min-h-screen;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-md bg-white/30 border border-white/20 shadow-xl;
+}
+
+.neon-border {
+  @apply border-theme-primary shadow-glow;
+}
